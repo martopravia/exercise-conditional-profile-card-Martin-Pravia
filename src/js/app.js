@@ -35,8 +35,13 @@ function render(variables = {}) {
   }
   if (!variables.twitter || variables.twitter.trim() === "") {
     errors.push("Agregue su twitter o por defecto complete con 1111");
-  } else if (!/^@?(\w){1,15}$/.test(variables.twitter.trim())) {
+  } else if (!/^@?(\w){1,30}$/.test(variables.twitter.trim())) {
     errors.push("El usuario debe de tener entrer 1 y 30 caracteres");
+  }
+  if (!variables.github || variables.github.trim() === "") {
+    errors.push("Agregue su GitHub o por defecto complete con 1111");
+  } else if (!/^[a-zA-Z0-9-]{1,30}$/.test(variables.github.trim())) {
+    errors.push("El usuario de GitHub debe de tener entre 1 y 30 caracteres");
   }
 
   //
