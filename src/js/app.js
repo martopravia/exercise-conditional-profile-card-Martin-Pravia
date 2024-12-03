@@ -43,6 +43,11 @@ function render(variables = {}) {
   } else if (!/^[a-zA-Z0-9-]{1,30}$/.test(variables.github.trim())) {
     errors.push("El usuario de GitHub debe de tener entre 1 y 30 caracteres");
   }
+  if (!variables.linkedin || variables.linkedin.trim() === "") {
+    errors.push("Agregue su LinkedIn o por defecto complete con 1111");
+  } else if (!/^([a-zA-Z0-9-]){1,30}$/.test(variables.linkedin.trim())) {
+    errors.push("El usuario de LinkedIn debe de tener entre 1 y 30 caracteres");
+  }
 
   //
   //
