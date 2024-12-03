@@ -59,6 +59,9 @@ function render(variables = {}) {
   if (!variables.city || variables.city.trim() === "") {
     errors.push("Seleccione su ciudad por favor.");
   }
+  if (!variables.country || variables.country.trim() === "") {
+    errors.push("Seleccione su país por favor");
+  }
 
   //
   //
