@@ -56,6 +56,9 @@ function render(variables = {}) {
   if (!variables.role || variables.role.trim() === "") {
     errors.push("Seleccione su rol por favor");
   }
+  if (!variables.city || variables.city.trim() === "") {
+    errors.push("Seleccione su ciudad por favor.");
+  }
 
   //
   //
