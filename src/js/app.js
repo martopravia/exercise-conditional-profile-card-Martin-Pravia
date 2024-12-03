@@ -93,6 +93,17 @@ function render(variables = {}) {
               variables.instagram
             }"><i class="fab fa-instagram"></i></a></li>
           </ul>
+  <div class="error-box">
+      ${
+        errors.length > 0
+          ? `
+        <h3>Errores encontrados:</h3>
+        <ul>${errors.map(err => `<li>${err}</li>`).join("")}</ul>
+        `
+          : ""
+      }
+  </div>
+
 
     `;
 }
