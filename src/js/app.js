@@ -53,6 +53,9 @@ function render(variables = {}) {
   } else if (!/^[a-zA-Z0-9._]{1,30}$/.test(variables.instagram.trim())) {
     errors.push("Agegue su usuario de Instagram entre 1 y 30 caracteres");
   }
+  if (!variables.role || variables.role.trim() === "") {
+    errors.push("Seleccione su rol por favor");
+  }
 
   //
   //
