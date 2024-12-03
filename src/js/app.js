@@ -48,6 +48,11 @@ function render(variables = {}) {
   } else if (!/^([a-zA-Z0-9-]){1,30}$/.test(variables.linkedin.trim())) {
     errors.push("El usuario de LinkedIn debe de tener entre 1 y 30 caracteres");
   }
+  if (!variables.instagram || variables.instagram.trim() === "") {
+    errors.push("Agregue su Instagram o por defecto complete con 1111");
+  } else if (!/^[a-zA-Z0-9._]{1,30}$/.test(variables.instagram.trim())) {
+    errors.push("Agegue su usuario de Instagram entre 1 y 30 caracteres");
+  }
 
   //
   //
