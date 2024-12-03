@@ -93,19 +93,27 @@ function render(variables = {}) {
               variables.instagram
             }"><i class="fab fa-instagram"></i></a></li>
           </ul>
+          </div>
   <div class="error-box">
       ${
         errors.length > 0
           ? `
-        <h3>Errores encontrados:</h3>
+        <h3>Por favor verifique:</h3>
         <ul>${errors.map(err => `<li>${err}</li>`).join("")}</ul>
         `
           : ""
       }
-  </div>
-
-
-    `;
+  </div>`;
+  const errorBox = document.querySelector(".error-box");
+  if (errors.length > 0) {
+    errorBox.style.position = "absolute";
+    errorBox.style.bottom = "10px";
+    errorBox.style.left = "10px";
+    errorBox.style.backgroundColor = "#f8d7da";
+    errorBox.style.color = "#721c24";
+    errorBox.style.padding = "10px";
+    errorBox.style.borderRadius = "5px";
+  }
 }
 
 /**
