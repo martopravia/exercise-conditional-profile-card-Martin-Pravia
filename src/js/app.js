@@ -30,6 +30,9 @@ function render(variables = {}) {
   if (!variables.name || variables.name.trim() === "") {
     errors.push("Agregue su nombre por favor");
   }
+  if (!variables.lastName || variables.lastName.trim() === "") {
+    errors.push("Agregue su apellido por favor");
+  }
 
   //
   //
