@@ -100,3 +100,18 @@
   border: none;
   border-radius: 0 0 3px 0;
 }
+
+.errors {
+  color: red;
+  font-size: 14px;
+  margin: 20px;
+}
+
+.errors ul {
+  list-style: none;
+  padding: 0;
+}
+
+.errors li {
+  margin-bottom: 5px;
+}

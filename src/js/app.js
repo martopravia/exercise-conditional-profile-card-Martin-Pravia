@@ -26,6 +26,13 @@ function render(variables = {}) {
   console.log("These are the current variables: ", variables); // print on the console
   // here we ask the logical questions to make decisions on how to build the html
   // if includeCover==false then we reset the cover code without the <img> tag to make the cover transparent.
+  const errors = [];
+  if (!variables.name || variables.name.trim() === "") {
+    errors.push("Agregue su nombre por favor");
+  }
+
+  //
+  //
   let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
 
@@ -54,7 +61,7 @@ function render(variables = {}) {
               variables.instagram
             }"><i class="fab fa-instagram"></i></a></li>
           </ul>
-        </div>
+
     `;
 }
 
