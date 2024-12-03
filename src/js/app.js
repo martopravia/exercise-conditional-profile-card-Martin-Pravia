@@ -33,6 +33,11 @@ function render(variables = {}) {
   if (!variables.lastName || variables.lastName.trim() === "") {
     errors.push("Agregue su apellido por favor");
   }
+  if (!variables.twitter || variables.twitter.trim() === "") {
+    errors.push("Agregue su twitter o por defecto complete con 1111");
+  } else if (!/^@?(\w){1,15}$/.test(variables.twitter.trim())) {
+    errors.push("El usuario debe de tener entrer 1 y 30 caracteres");
+  }
 
   //
   //
